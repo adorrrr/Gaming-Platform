@@ -24,6 +24,28 @@ async function main() {
 };
 
 
+app.get("/home", async (req, res) => {        
+    res.render("index"); // সঠিক
+});
+
+//New route
+app.get("/game/tic-tac", (req, res) =>{
+    res.render("new.ejs");
+});
+app.get("/game/guessing", (req, res) =>{
+    res.render("new.ejs");
+});
+app.get("/game/memory-card", (req, res) =>{
+    res.render("new.ejs");
+});
+app.get("/game/rock-paper", (req, res) =>{
+    res.render("new.ejs");
+});
+app.get("/game/reaction-time", (req, res) =>{
+    res.render("new.ejs");
+});
+
+
 
 
 
@@ -31,11 +53,7 @@ app.listen(8080, ()=>{
     console.log("server is listening on port 8080");
 });
 
-app.get("/home", async (req, res) => {        
-    res.render("index"); // সঠিক
-});
-
 app.get("/", (req, res) => {
-    res.render("index"); // সঠিক
+     res.send("kichu ekta hoche");
 });
 

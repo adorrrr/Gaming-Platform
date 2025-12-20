@@ -26,12 +26,25 @@
                     <li class="active">Home</li>
                     <li>New</li>
                     <li>Popular</li>
+                    <br>
                     <hr>
-                    <li>Tic Tac Toe</li>
-                    <li>Number Guessing</li>
-                    <li>Memory Card</li>
-                    <li>Rock Paper Scissors</li>
-                    <li>Reaction Time</li>
+                    <br>
+                    <form method="GET" action="/game/tic-tac">
+                        <button>Tic Tac Toe</button>
+                    </form>
+                    <form method="GET" action="/game/guessing">
+                        <button>Number Guessing</button>
+                    </form>
+                    <form method="GET" action="/game/memory-card">
+                        <button>Memory Card</button>
+                    </form>
+                    <form method="GET" action="/game/rock-paper">
+                        <button>Rock Paper Scissors</button>
+                    </form>
+                    <form method="GET" action="/game/reaction-time">
+                        <button>Reaction Time</button>
+                    </form>
+
                 </ul>
             </nav>
         </aside>
@@ -55,11 +68,22 @@
             </div>
 
             <h3>Featured games</h3> <br>
-            <div class="game-grid" id="featured-games">
+            <div  class="game-grid" id="featured-games">
+                <form action="/game/tic-tac">
                     <div class="game-card small"></div>
+                </form>
+                <form action="">
                     <div class="game-card small"></div>
+                </form>
+                <form action="">
                     <div class="game-card small"></div>
+                </form>
+                <form action="">
                     <div class="game-card small"></div>
+                </form>
+                <form action="">
+                    <div class="game-card small"></div>
+                </form>
                 </div>
         </main>
     </div>

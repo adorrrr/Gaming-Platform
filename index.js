@@ -4,14 +4,14 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const User = require("./models/user.js");
-const methodOverride = require("method-override");
+
 
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true }));
-app.use(methodOverride("_method"));
+
 
 //mongoose setup
 main().then( () => {
@@ -29,20 +29,23 @@ app.get("/home", async (req, res) => {
 });
 
 //New route
-app.get("/game/tic-tac", (req, res) =>{
-    res.render("new.ejs");
+app.get("/game/tic-tac", (req, res) => {
+    res.render("tictac");
 });
-app.get("/game/guessing", (req, res) =>{
-    res.render("new.ejs");
+
+app.get("/game/guessing", (req, res) => {
+    res.render("guessing");
 });
+
 app.get("/game/memory-card", (req, res) =>{
-    res.render("new.ejs");
+    res.render("memory-card");
 });
+
 app.get("/game/rock-paper", (req, res) =>{
-    res.render("new.ejs");
+    res.render("rock-paper");
 });
-app.get("/game/reaction-time", (req, res) =>{
-    res.render("new.ejs");
+app.get("/game/whack-a-mole", (req, res) =>{
+    res.render("whack-a-mole");
 });
 
 

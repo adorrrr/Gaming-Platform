@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Portal</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -50,11 +48,28 @@
         </aside>
 
         <main class="content">
-            <h3>Top picks for you</h3><br>
-                <div class="game main-feature" style="background-image: url('/img/cover.png')">
-                </div>
+            <h2>Number Guessing Game</h2><br>
+            <div class="game main-feature guessing-container">
+                <br><br>
+                <p class="info">
+                    Guess a number between <b>1 and 100</b>
+                </p>
+                <br><br>
+                <input 
+                    type="number" 
+                    id="guessInput" 
+                    placeholder="Enter number"
+                    min="1"
+                    max="100"
+                >
+                <button onclick="checkGuess()">Guess</button>
+                <p id="message"></p>
+                <p id="attempts">Attempts: 0</p>
+                <button class="restart" onclick="restartGame()">Restart</button>
+            <br><br>
+            </div>
 
-
+<br><br>
             <h3>Featured games</h3> <br>
             <div class="game-grid" id="featured-games">       
                 <form method="GET" action="/game/tic-tac">
@@ -85,15 +100,15 @@
                     </button>
                 </form>
             
-                <form method="GET" action="/game/reaction-time">
+                <form method="GET" action="/game/whack-a-mole">
                     <button type="submit" class="game-btn">
-                        <img src="/img/whack-a-mole.jpeg" alt="whack-a-mole" class="game-card small">
+                        <img src="/img/whack-a-mole.jpeg" alt="Whack-a-mole" class="game-card small">
                         <p>Whack-a-mole</p>
                     </button>
                 </form>
             </div>
-
         </main>
     </div>
+    <script src="/js/guessing.js"></script>
 </body>
 </html>

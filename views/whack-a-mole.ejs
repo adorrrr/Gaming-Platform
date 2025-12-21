@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Portal</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -50,11 +48,30 @@
         </aside>
 
         <main class="content">
-            <h3>Top picks for you</h3><br>
-                <div class="game main-feature" style="background-image: url('/img/cover.png')">
+            <h2>Whack-A-Mole</h2><br>
+            <div class="game main-feature whack-container"><br><br>
+                <div class="info">
+                    <span>Score: <b id="score">0</b></span>
+                    <span>Time: <b id="time">30</b>s</span>
                 </div>
-
-
+            
+                <div class="grid" id="grid">
+                    <!-- holes -->
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div><br>
+                <button onclick="startGame()">Start Game</button>
+                <button onclick="restartGame()" class="restart-btn">Restart</button>
+                <button onclick="stopGame()" class="stop-btn">Stop</button>
+            </div>
+<br><br>
             <h3>Featured games</h3> <br>
             <div class="game-grid" id="featured-games">       
                 <form method="GET" action="/game/tic-tac">
@@ -85,7 +102,7 @@
                     </button>
                 </form>
             
-                <form method="GET" action="/game/reaction-time">
+                <form method="GET" action="/game/whack-a-mole">
                     <button type="submit" class="game-btn">
                         <img src="/img/whack-a-mole.jpeg" alt="whack-a-mole" class="game-card small">
                         <p>Whack-a-mole</p>
@@ -95,5 +112,6 @@
 
         </main>
     </div>
+    <script src="/js/whack-a-mole.js"></script>
 </body>
 </html>

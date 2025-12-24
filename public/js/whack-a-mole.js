@@ -18,6 +18,8 @@ function startGame() {
     timeEl.textContent = timeLeft;
     gameRunning = true;
 
+
+
     moleTimer = setInterval(showMole, 800);
     gameTimer = setInterval(countDown, 1000);
 }
